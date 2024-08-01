@@ -190,3 +190,22 @@ footer {
         height: 60px;
     }
 }
+.order-buttons {
+    display: flex;
+    flex-direction: column; /* Change to row for side-by-side buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+.order-buttons button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 150px; /* Adjust width as needed */
+}
+
+.order-buttons button:hover {
+    background-color: #005bb5;
+}
+
