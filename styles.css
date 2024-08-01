@@ -102,9 +102,9 @@ main {
 }
 
 .activity-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    margin-right: 15px; /* Increase margin if needed */
 }
 
 .activity-text {
@@ -139,8 +139,8 @@ footer {
     }
 
     .activity-image {
-        width: 80px;
-        height: 80px;
+        width: 120px; /* Adjust size for smaller screens */
+        height: 120px; /* Adjust size for smaller screens */
     }
 
     .logos .logo {
