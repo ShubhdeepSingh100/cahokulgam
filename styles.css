@@ -166,12 +166,4 @@ footer {
         margin: 5px 0;
     }
 }
-```
 
-### Key Updates:
-- **Header and Chief Photo**: Centered the header content and adjusted margins.
-- **Logos and Navigation**: Adjusted spacing and size for better alignment on smaller screens.
-- **Activities Section**: Ensured activity images and text are responsive and moved text animation.
-- **Mobile Responsiveness**: Improved flexibility for smaller screens with adjustments to layout, font sizes, and spacing.
-
-This CSS will ensure your index page is visually appealing and functional across different devices.
