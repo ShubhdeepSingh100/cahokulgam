@@ -1,3 +1,8 @@
+To ensure the index page looks good and is responsive, here’s the updated CSS to complement your HTML:
+
+### Updated `styles.css`
+
+```css
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,59 +18,108 @@ header {
     text-align: center;
 }
 
-h1 {
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Center items in column for smaller screens */
+}
+
+.chief-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 15px;
+}
+
+.title-section h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+}
+
+.title-section p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    background-color: #e0e0e0;
+    padding: 20px 0;
+}
+
+.logos .logo {
+    margin: 0 15px;
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
 }
 
 main {
     padding: 20px;
 }
 
-section h2 {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px;
-    margin: 0 0 20px 0;
-    text-align: center;
-}
-
-.members {
+#activities {
     margin-bottom: 40px;
 }
 
-.member {
+#activities h2 {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.activity {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.member img {
-    border-radius: 50%;
-    margin-right: 20px;
+.activity-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
 }
 
-.orders {
-    margin-bottom: 40px;
+.activity-text {
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
 }
 
-.order-buttons {
-    display: flex;
-    flex-direction: column; /* Use 'row' for side-by-side buttons */
-    gap: 10px; /* Space between buttons */
-}
-
-.order-buttons button {
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 150px; /* Adjust as needed */
-}
-
-.order-buttons button:hover {
-    background-color: #005bb5;
+@keyframes moveText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
 
 footer {
@@ -77,8 +131,16 @@ footer {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
+    .header-content {
+        flex-direction: column;
+    }
+
+    .title-section h1 {
+        font-size: 1.8em;
+    }
+
+    .title-section p {
+        font-size: 1em;
     }
 
     .member img {
@@ -86,11 +148,30 @@ footer {
         height: 80px;
     }
 
-    .order-buttons {
-        width: 100%;
+    .activity-image {
+        width: 80px;
+        height: 80px;
     }
 
-    .order-buttons button {
-        width: 100%;
+    .logos .logo {
+        width: 80px;
+        margin: 0 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
+```
+
+### Key Updates:
+- **Header and Chief Photo**: Centered the header content and adjusted margins.
+- **Logos and Navigation**: Adjusted spacing and size for better alignment on smaller screens.
+- **Activities Section**: Ensured activity images and text are responsive and moved text animation.
+- **Mobile Responsiveness**: Improved flexibility for smaller screens with adjustments to layout, font sizes, and spacing.
+
+This CSS will ensure your index page is visually appealing and functional across different devices.
