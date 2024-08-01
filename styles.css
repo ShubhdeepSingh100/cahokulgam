@@ -8,21 +8,31 @@ body {
 
 .header-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #0073e6;
     padding: 20px;
     color: white;
+    text-align: center;
 }
 
 .chief-photo img {
     border-radius: 50%;
     border: 5px solid white;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.title-section {
+    max-width: 600px;
+    margin-top: 20px;
 }
 
 .title-section h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .title-section p {
@@ -33,13 +43,14 @@ body {
 .logos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #e0e0e0;
     padding: 20px 0;
 }
 
 .logos .logo {
-    margin: 0 20px;
-    width: 100px;
+    margin: 10px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -53,10 +64,11 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 5px;
 }
 
 nav ul li a {
@@ -64,6 +76,7 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    text-align: center;
 }
 
 nav ul li a:hover {
@@ -82,19 +95,23 @@ section h2 {
     background-color: #0073e6;
     color: white;
     padding: 10px;
+    margin: 0;
+    text-align: center;
 }
 
 .activity {
     display: flex;
     align-items: center;
     overflow: hidden;
+    flex-direction: column;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .activity-image {
     width: 100px;
     height: 100px;
-    margin-right: 10px;
+    margin: 0 auto 10px;
 }
 
 .activity-text {
@@ -124,4 +141,52 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-section h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .logos .logo {
+        max-width: 80px;
+    }
+
+    .activity-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .activity-text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-section h1 {
+        font-size: 1.2em;
+    }
+
+    .title-section p {
+        font-size: 1em;
+    }
+
+    .activity-image {
+        width: 60px;
+        height: 60px;
+    }
 }
