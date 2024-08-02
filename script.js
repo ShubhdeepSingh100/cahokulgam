@@ -1,12 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.activity-image');
-    images.forEach(image => {
-        image.style.position = 'relative';
-        image.style.animation = 'moveImage 10s linear infinite';
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggle-message');
+    const chiefMessage = document.getElementById('chief-message');
+    
+    toggleButton.addEventListener('click', () => {
+        if (chiefMessage.style.display === 'none') {
+            chiefMessage.style.display = 'block';
+            toggleButton.textContent = 'Read Less';
+        } else {
+            chiefMessage.style.display = 'none';
+            toggleButton.textContent = 'Read More';
+        }
     });
 });
-
-@keyframes moveImage {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
