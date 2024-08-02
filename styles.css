@@ -15,9 +15,9 @@ header {
 
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 .chief-photo img {
@@ -96,25 +96,55 @@ main {
 }
 
 .activity {
-    display: flex;
-    align-items: center;
     margin-bottom: 20px;
-}
-
-.activity-image {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    margin-right: 15px; /* Increase margin if needed */
+    text-align: center;
 }
 
 .activity-text {
-    white-space: nowrap;
-    animation: moveText 10s linear infinite;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-@keyframes moveText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+.activity-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.activity-image {
+    width: 200px;
+    height: auto;
+}
+
+#credits {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#credits h2 {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.developer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.developer-name,
+.developer-email {
+    font-size: 1.2em;
 }
 
 footer {
@@ -139,8 +169,7 @@ footer {
     }
 
     .activity-image {
-        width: 120px; /* Adjust size for smaller screens */
-        height: 120px; /* Adjust size for smaller screens */
+        width: 120px;
     }
 
     .logos .logo {
